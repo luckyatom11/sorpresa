@@ -182,10 +182,12 @@ function goTo(index) {
 const fondo = document.getElementById("fondo");
 for (let i = 0; i < 25; i++) {
     let flor = document.createElement("img");
-    flor.src = "https://www.pngmart.com/files/4/Sunflower-PNG-HD.png";
+    flor.src = "Sunflower-PNG-HD.png";
     flor.className = "girasol";
     flor.style.left = Math.random() * 100 + "vw";
-    flor.style.animationDuration = (5 + Math.random() * 5) + "s";
+    const duracion = 5 + Math.random() * 5;
+    flor.style.animationDuration = duracion + "s";
+    flor.style.animationDelay = (-Math.random() * duracion) + "s";
     flor.style.width = (25 + Math.random() * 35) + "px";
     fondo.appendChild(flor);
 }
